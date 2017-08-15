@@ -1,0 +1,9 @@
+
+State Machine - |LAB-IV|Sprite_Processor:inst6|EstadoAtual_FSM1
+Name EstadoAtual_FSM1.Read_Sprite_ID EstadoAtual_FSM1.Read_Sprite_Color EstadoAtual_FSM1.Read_Sprite_Y EstadoAtual_FSM1.Read_Sprite_X EstadoAtual_FSM1.Set_Address_FSM1 EstadoAtual_FSM1.Reset_FSM1 
+EstadoAtual_FSM1.Reset_FSM1 0 0 0 0 0 0 
+EstadoAtual_FSM1.Set_Address_FSM1 0 0 0 0 1 1 
+EstadoAtual_FSM1.Read_Sprite_X 0 0 0 1 0 1 
+EstadoAtual_FSM1.Read_Sprite_Y 0 0 1 0 0 1 
+EstadoAtual_FSM1.Read_Sprite_Color 0 1 0 0 0 1 
+EstadoAtual_FSM1.Read_Sprite_ID 1 0 0 0 0 1 

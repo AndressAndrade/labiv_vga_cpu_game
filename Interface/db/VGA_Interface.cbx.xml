@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="VGA_Interface">
+		<CBX_INST_ENTRY INSTANCE_NAME="|LAB-IV|Data_Segment_RAM:inst4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_16j1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|LAB-IV|PLL:inst1|altpll:altpll_component" CBX_FILE_NAME="PLL_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>

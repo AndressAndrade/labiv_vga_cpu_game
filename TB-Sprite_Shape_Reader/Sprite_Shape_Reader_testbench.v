@@ -1,0 +1,221 @@
+
+// Definicao da unidade de tempo e da precisao da simulacao
+`timescale 1ns/1ns
+
+module Sprite_Shape_Reader_tb;
+
+	// Outputs do modulo 'Sprite_Shape_Reader_tb'
+	// Inputs do modulo 'Sprite_Shape_Reader'
+	
+	reg	clk;
+	reg	rst;
+	reg	[6:0]	level_counter;
+	reg	[15:0]	data_in;
+	reg	[383:0]	sprite_id;
+	reg	[639:0]	sprite_y;
+	reg	[9:0]	V_pos_in;
+	reg	[9:0]	H_pos_in;
+
+	// Inputs do modulo 'Sprite_Shape_Reader_tb'
+	// Outputs do modulo 'Sprite_Shape_Reader'
+
+	wire	[3:0]		EstadoAtual_FSM1;
+	wire	[15:0]		addr_out;
+	wire	[1023:0]	sprite_shape_out;
+	wire	wren_out;
+	wire	level_counter_reset;
+	wire	level_counter_enable;
+
+
+	// Outputs do modulo 'Sprite_Shape_Reader_tb'
+	// Inputs do modulo 'Level_Counter'
+	
+	reg	clock;
+	reg	reset;
+	reg	enable;
+
+	// Inputs do modulo 'Sprite_Shape_Reader_tb'
+	// Outputs do modulo 'Level_Counter'
+
+	wire	[6:0]	level_out;
+
+	// Outputs do modulo 'Sprite_Shape_Reader_tb'
+	// Inputs do modulo 'VGA_Interface_block'
+	reg	clk_vga;
+	reg	rst_vga;
+	reg	[7:0]	R_in;
+	reg	[7:0]	G_in;
+	reg	[7:0]	B_in;
+
+	// Inputs do modulo 'Sprite_Shape_Reader_tb'
+	// Outputs do modulo 'VGA_Interface_block'
+	wire	[19:0]	oAddress;
+	wire	[7:0]	R;
+	wire	[7:0]	G;
+	wire	[7:0]	B;
+	wire	HS;
+	wire	VS;
+	wire	BLANK;
+	wire	VGA_SYNC;
+	wire	VGA_CLK;
+	wire	[9:0]	h_pos;
+	wire	[9:0]	v_pos;
+
+	// Instanciacao do modulo Sprite_Shape_Reader
+	Sprite_Shape_Reader U0(
+	.clk			(clk),
+	.rst			(rst),
+	.level_counter		(level_counter),
+	.data_in		(data_in),
+	.sprite_id		(sprite_id),
+	.sprite_y		(sprite_y),
+	.V_pos_in		(V_pos_in),
+	.H_pos_in		(H_pos_in),
+	
+	.sprite_shape_out	(sprite_shape_out),
+	.wren_out		(wren_out),
+	.addr_out		(addr_out),
+	.level_counter_enable	(level_counter_enable),
+	.level_counter_reset	(level_counter_reset),
+	.EstadoAtual_FSM1	(EstadoAtual_FSM1)
+	);
+
+	// Instanciacao do modulo Level_Counter
+	Level_Counter U1(
+	.clock			(clock),
+	.reset			(reset),
+	.enable			(enable),
+	
+	.level_out		(level_out)
+	);
+
+	// Instanciacao do modulo VGA_Interface_block
+	VGA_Interface_block U2(
+	.clk		(clk_vga),
+	.rst		(rst_vga),
+	.R_in		(R_in),
+	.G_in		(G_in),
+	.B_in		(B_in),
+	
+	.oAddress	(oAddress),
+	.R		(R),
+	.G		(G),
+	.B		(B),
+	.HS		(HS),
+	.VS		(VS),
+	.BLANK		(BLANK),
+	.VGA_SYNC	(VGA_SYNC),
+	.VGA_CLK	(VGA_CLK),
+	.h_pos		(h_pos),
+	.v_pos		(v_pos)
+	);
+
+
+	// Inicializacao das entradas
+	initial
+	begin
+		clk_vga = 1;
+		clk = 1;
+		rst = 0;	// Botao DE2-115 nao pressionado em 0ns
+		#40 rst = 1;	// Botao DE2-115 pressionado em 40ns
+		#40 rst = 0;	// Botao DE2-115 nao pressionado em 80ns
+	end
+
+	// Criacao de clock com periodo de 20ns para Sprite_Shape_Reader (50 Mhz)
+	always
+		#10 clk = !clk;
+
+	// Criacao de clock com periodo de 40ns para VGA_Interface_block (25 Mhz)
+	always
+		#20 clk_vga = !clk_vga;
+
+	// Interligacao entre modulo Sprite_Shape_Reader e Level_Counter
+	always @ (clock, clk, reset, level_counter_reset, enable, level_counter_enable, level_out, level_counter)
+	begin
+		clock = clk;
+		reset = level_counter_reset;
+		enable = level_counter_enable;
+		level_counter = level_out;
+	end
+
+	// Interligacao entre modulo Sprite_Shape_Reader e VGA_Interface_block
+	always @ (rst_vga, rst, V_pos_in, v_pos, H_pos_in, h_pos)
+	begin
+		rst_vga = rst;
+		V_pos_in = v_pos;
+		H_pos_in = h_pos;
+	end
+
+	always @ (clk)
+	begin
+		sprite_id[383:378] <= 6'b000100;	// SPRITE LEVEL 63 = 4
+		sprite_id[377:372] <= 6'b000011;	// SPRITE LEVEL 62 = 3
+		sprite_id[371:366] <= 6'b000010;	// SPRITE LEVEL 61 = 2
+		sprite_id[365:360] <= 6'b000001;	// SPRITE LEVEL 60 = 1
+		sprite_id[359:354] <= 6'b000000;	// SPRITE LEVEL 59 = 0
+		
+		sprite_y[639:630] <= 10'b0000100001;	// SPRITE LEVEL 63 = 33
+		sprite_y[629:620] <= 10'b0000100010;	// SPRITE LEVEL 62 = 34
+		sprite_y[619:610] <= 10'b0000100011;	// SPRITE LEVEL 61 = 35
+		sprite_y[609:600] <= 10'b0000100100;	// SPRITE LEVEL 60 = 36
+		sprite_y[599:590] <= 10'b0000100101;	// SPRITE LEVEL 59 = 37
+	end
+
+	// Simulacao da memoria RAM interna
+	always @ (negedge clk)
+	begin
+		case (addr_out)
+			16:	data_in <= 16'b1111111111111111;	//shape	id1	line_1
+			17:	data_in <= 16'b1111111111111111;	//shape	id1	line_2
+			18:	data_in <= 16'b1111111111111111;	//shape	id1	line_3
+			19:	data_in <= 16'b1111111111111111;	//shape	id1	line_4
+			20:	data_in <= 16'b1111111111111111;	//shape	id1	line_5
+			21:	data_in <= 16'b1111111111111111;	//shape	id1	line_6
+			22:	data_in <= 16'b1111111111111111;	//shape	id1	line_7
+			23:	data_in <= 16'b1111111111111111;	//shape	id1	line_8
+			24:	data_in <= 16'b1111111111111111;	//shape	id1	line_9
+			25:	data_in <= 16'b1111111111111111;	//shape	id1	line_10
+			26:	data_in <= 16'b1111111111111111;	//shape	id1	line_11
+			27:	data_in <= 16'b1111111111111111;	//shape	id1	line_12
+			28:	data_in <= 16'b1111111111111111;	//shape	id1	line_13
+			29:	data_in <= 16'b1111111111111111;	//shape	id1	line_14
+			30:	data_in <= 16'b1111111111111111;	//shape	id1	line_15
+			31:	data_in <= 16'b1111111111111111;	//shape	id1	line_16
+
+			default:
+				data_in <= 16'b0000000000000000;
+		endcase
+	end
+
+	always @ (v_pos)
+	begin
+		if (v_pos == 512)
+		begin
+			$stop;
+		end
+	end
+
+/*
+	reg	[15:0]	data_in_sprite;
+	wire	[15:0]	addr_out_sprite;
+	wire	[6:0]	level_count_sprite;
+	wire	[15:0]	ram_addr_sprite;
+*/
+
+	// Exibicao no terminal do tempo de simulacao
+	
+	// VISUALIZACAO PARA TESTAR LEITURA DA SRAM E EXIBICAO NO VGA
+	/*initial
+	begin
+		$monitor("\tTIME\t\tCLK_50\tCLK_25\tRST\toRED\tRED\t\toGREEN\tGREEN\t\toBLUE\tBLUE\t\tV_POS\tH_POS\tADDR\t\tSTATE \n\t|%.4d|\t\t|%b|\t|%b|\t|%b|\t|%d|\t|%d|\t\t|%d|\t|%d|\t\t|%d|\t|%d|\t\t|%.4d|\t|%.4d|\t|%.4d|\t\t|%.4d|",$time,iCLK,clk,iRST,oRED,R,oGREEN,G,oBLUE,B,v_pos,h_pos,oAddress,EstadoAtual);
+	end*/
+
+	
+	// VISUALIZACAO PARA TESTAR PROCESSADOR DE SPRITES
+	initial
+	begin
+		$monitor("CLK_50\tCLK_25\tRST\tV_POS\tH_POS\tLVL_OUT\t\tSPRITE_ID\t\tSPRITE_Y\t\tADDR_OUT\t\tSPRITE_SHAPE\t\tSTATE \n|%b|\t|%b|\t|%b|\t|%.4d|\t|%.4d|\t|%.4d|\t\t|%.4d|\t\t|%.4d|\t\t|%.4d|\t\t|%.4d|\t\t|%.4d|",clk,clk_vga,rst,v_pos,h_pos,level_out,sprite_id,sprite_y,addr_out,sprite_shape_out,EstadoAtual_FSM1);
+	end
+
+
+endmodule

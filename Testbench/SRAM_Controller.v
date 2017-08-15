@@ -1,0 +1,57 @@
+module	SRAM_Controller(
+
+	//	Host Side
+	iRST_N,
+	iCLK,
+	iWE_N,
+	iOE_N,
+	iCE_N,
+	iLB_N,
+	iUB_N,
+	iADDR,
+	iDATA,
+	oDATA,
+	
+	// SRAM interface
+	SRAM_DQ,
+	SRAM_WE_N,
+	SRAM_OE_N,
+	SRAM_CE_N,
+	SRAM_LB_N,
+	SRAM_UB_N,
+	SRAM_ADDR
+);
+
+
+//	Host Side
+input					iRST_N;
+input					iCLK;
+input					iWE_N;
+input					iOE_N;
+input					iCE_N;
+input					iLB_N;
+input					iUB_N;
+input		[19:0]	iADDR;
+input		[15:0]	iDATA;
+output	[15:0]	oDATA;
+
+//	SRAM Side
+inout		[15:0]	SRAM_DQ;
+output				SRAM_WE_N;
+output				SRAM_OE_N;
+output				SRAM_CE_N;
+output				SRAM_LB_N;
+output				SRAM_UB_N;
+output	[19:0]	SRAM_ADDR;
+
+assign	SRAM_DQ 	=	SRAM_WE_N ? 16'hzzzz : iDATA;
+assign	oDATA		=	SRAM_DQ;
+assign	SRAM_ADDR	=	iADDR;
+assign	SRAM_WE_N	=	iWE_N;
+assign	SRAM_OE_N	=	iOE_N;
+assign	SRAM_CE_N	=	iCE_N;
+assign	SRAM_LB_N	=	iLB_N;
+assign	SRAM_UB_N	=	iUB_N;
+
+
+endmodule

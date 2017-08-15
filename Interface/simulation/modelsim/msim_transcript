@@ -1,0 +1,94 @@
+# Reading D:/quartus/modelsim_ase/tcl/vsim/pref.tcl
+# do VGA_Interface_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/quartus/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/raul/Lab\ 4-20170605T141755Z-001/Lab\ 4/gpu/Interface {D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/VGA_Interface_block.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:11:12 on Jun 06,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface" D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/VGA_Interface_block.v 
+# -- Compiling module VGA_Interface_block
+# 
+# Top level modules:
+# 	VGA_Interface_block
+# End time: 14:11:12 on Jun 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/raul/Lab\ 4-20170605T141755Z-001/Lab\ 4/gpu/Interface {D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/testbench_vga.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:11:12 on Jun 06,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface" D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/testbench_vga.v 
+# -- Compiling module testbench_vga
+# 
+# Top level modules:
+# 	testbench_vga
+# End time: 14:11:12 on Jun 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/raul/Lab\ 4-20170605T141755Z-001/Lab\ 4/gpu/Interface {D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/sprites.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:11:12 on Jun 06,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface" D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/sprites.v 
+# -- Compiling module sprites_controlador
+# 
+# Top level modules:
+# 	sprites_controlador
+# End time: 14:11:12 on Jun 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/raul/Lab\ 4-20170605T141755Z-001/Lab\ 4/gpu/Interface {D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/processador.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:11:12 on Jun 06,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface" D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/processador.v 
+# -- Compiling module GPU_processador
+# 
+# Top level modules:
+# 	GPU_processador
+# End time: 14:11:12 on Jun 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work {D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/testbench_vga.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:11:23 on Jun 06,2017
+# vlog -reportprogress 300 -work work D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/testbench_vga.v 
+# -- Compiling module testbench_vga
+# 
+# Top level modules:
+# 	testbench_vga
+# End time: 14:11:23 on Jun 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.testbench_vga
+# vsim work.testbench_vga 
+# Start time: 14:11:27 on Jun 06,2017
+# Loading work.testbench_vga
+# Loading work.VGA_Interface_block
+# Loading work.GPU_processador
+# Loading work.sprites_controlador
+add wave -position end  sim:/testbench_vga/clk
+add wave -position end  sim:/testbench_vga/rst
+add wave -position end  sim:/testbench_vga/clock_segundo
+add wave -position end  sim:/testbench_vga/contador_segundo
+add wave -position end  sim:/testbench_vga/R_in
+add wave -position end  sim:/testbench_vga/G_in
+add wave -position end  sim:/testbench_vga/B_in
+add wave -position end  sim:/testbench_vga/R
+add wave -position end  sim:/testbench_vga/G
+add wave -position end  sim:/testbench_vga/B
+add wave -position end  sim:/testbench_vga/HS
+add wave -position end  sim:/testbench_vga/VS
+add wave -position end  sim:/testbench_vga/BLANK
+add wave -position end  sim:/testbench_vga/VGA_SYNC
+add wave -position end  sim:/testbench_vga/VGA_CLK
+add wave -position end  sim:/testbench_vga/h_pos
+add wave -position end  sim:/testbench_vga/v_pos
+add wave -position end  sim:/testbench_vga/indice
+add wave -position end  sim:/testbench_vga/R_out_gpu
+add wave -position end  sim:/testbench_vga/G_out_gpu
+add wave -position end  sim:/testbench_vga/B_out_gpu
+run -all
+# End time: 14:12:13 on Jun 06,2017, Elapsed time: 0:00:46
+# Errors: 0, Warnings: 0

@@ -1,0 +1,187 @@
+DEPTH = 65536;			-- The size of memory in words
+WIDTH = 16;			-- The size of data in bits
+ADDRESS_RADIX = HEX;		-- The radix for address values
+DATA_RADIX = HEX;		-- The radix for data values
+CONTENT				-- start of (address : data pairs)
+BEGIN
+
+00 : FFFF;	-- SPRITE SHAPE - ID 0
+01 : FFFF;
+02 : FFFF;
+03 : FFFF;
+04 : F00F;
+05 : F00F;
+06 : F00F;
+07 : F00F;
+08 : F00F;
+09 : F00F;
+0A : F00F;
+0B : F00F;
+0C : FFFF;
+0D : FFFF;
+0E : FFFF;
+0F : FFFF;
+10 : FFFF;	-- SPRITE SHAPE - ID 1
+11 : FFFF;
+12 : FFFF;
+13 : FFFF;
+14 : FFFF;
+15 : FFFF;
+16 : FFFF;
+17 : FFFF;
+18 : FFFF;
+19 : FFFF;
+1A : FFFF;
+1B : FFFF;
+1C : FFFF;
+1D : FFFF;
+1E : FFFF;
+1F : FFFF;
+20 : F00F;	-- SPRITE SHAPE - ID 2
+21 : F00F;
+22 : F00F;
+23 : F00F;
+24 : 0000;
+25 : 0000;
+26 : 0FF0;
+27 : 0FF0;
+28 : 0FF0;
+29 : 0FF0;
+2A : 0000;
+2B : 0000;
+2C : F00F;
+2D : F00F;
+2E : F00F;
+2F : F00F;
+30 : FFFF;	-- SPRITE SHAPE - ID 3
+31 : FFFF;
+32 : FFFF;
+33 : FFFF;
+34 : FFFF;
+35 : FFFF;
+36 : FFFF;
+37 : FFFF;
+38 : FFFF;
+39 : FFFF;
+3A : FFFF;
+3B : FFFF;
+3C : FFFF;
+3D : FFFF;
+3E : FFFF;
+3F : FFFF;
+40 : 0FF0;	-- SPRITE SHAPE - ID 4 - PACMAN'S BODY
+41 : 1FF8;	
+42 : 3FFC;	
+43 : 7FFE;	
+44 : 7FFF;	
+45 : FFFF;	
+46 : FFF8;	
+47 : FFE0;	
+48 : FF00;	
+49 : FFC0;	
+4A : FFF0;	
+4B : 7FFE;	
+4C : 7FFF;	
+4D : 3FFE;	
+4E : 1FFC;	
+4F : 0FF0;
+50 : 0000;	-- SPRITE SHAPE - ID 5 - PACMAN'S EYE
+51 : 0000;	
+52 : 0020;	
+53 : 0070;	
+54 : 0020;	
+55 : 0000;	
+56 : 0000;	
+57 : 0000;	
+58 : 0000;	
+59 : 0000;	
+5A : 0000;	
+5B : 0000;	
+5C : 0000;	
+5D : 0000;	
+5E : 0000;	
+5F : 0000;
+60 : 0000;	-- SPRITE SHAPE - ID 6 - COMPLETE PACMAN
+61 : 1FF8;	
+62 : 3FDC;	
+63 : 7F8E;	
+64 : 7FDF;	
+65 : FFFF;	
+66 : FFF8;	
+67 : FFE0;	
+68 : FF00;	
+69 : FFC0;	
+6A : FFF0;	
+6B : 7FFE;	
+6C : 7FFF;	
+6D : 3FFE;	
+6E : 1FFC;	
+6F : 0FF0;
+70 : 07E0;	-- SPRITE SHAPE - ID 7 - PACMAN'S MONSTER
+71 : 0FF0;	
+72 : 1FF8;	
+73 : 3FFC;	
+74 : 7FFE;	
+75 : 73CE;	
+76 : E187;	
+77 : F3CF;	
+78 : FFFF;	
+79 : FFFF;	
+7A : FFFF;	
+7B : FFFF;	
+7C : FFFF;	
+7D : FFFF;	
+7E : E997;	
+7F : 6996;
+80 : 0FF0;	-- SPRITE SHAPE - ID  - PACMAN'S FORM
+81 : 1FF8;	
+82 : 3FFC;	
+83 : 7FFE;	
+84 : 7FFF;	
+85 : FFFF;	
+86 : FFF8;	
+87 : FFFF;	
+88 : FFFF;	
+89 : FFFF;	
+8A : FFFF;	
+8B : FFFF;	
+8C : 7FFF;	
+8D : 3FFE;	
+8E : 1FFC;	
+8F : 0FF0;
+90 : 0FF0;	-- SPRITE SHAPE - ID 9 
+91 : 1FF8;	
+92 : 3FFC;	
+93 : 7FFE;	
+94 : 7FFF;	
+95 : FFFF;	
+96 : FFF8;	
+97 : FFE0;	
+98 : FF00;	
+99 : FFC0;	
+9A : FFF0;	
+9B : 7FFE;	
+9C : 7FFF;	
+9D : 3FFE;	
+9E : 1FFC;	
+9F : 0FF0;
+100 : 0FF0;	-- SPRITE SHAPE - ID 10 
+101 : 1FF8;	
+102 : 3FFC;	
+103 : 7FFE;	
+104 : 7FFF;	
+105 : FFFF;	
+106 : FFF8;	
+107 : FFE0;	
+108 : FF00;	
+109 : FFC0;	
+10A : FFF0;	
+10B : 7FFE;	
+10C : 7FFF;	
+10D : 3FFE;	
+10E : 1FFC;	
+10F : 0FF0;
+[110..3FF]: FFFF;
+[400..FFFF]: 0000;
+
+END;

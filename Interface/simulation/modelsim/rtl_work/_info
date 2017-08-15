@@ -1,0 +1,99 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/simulation/modelsim
+vGPU_processador
+Z1 !s110 1496769072
+!i10b 1
+!s100 cmRL:^<SYd03lMS4^4TWG3
+Ib71TCYz65mRhb65JlhE4V3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1496768926
+8D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/processador.v
+FD:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/processador.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1496769072.000000
+!s107 D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/processador.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface|D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/processador.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work {+incdir+D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface}
+Z7 tCvgOpt 0
+n@g@p@u_processador
+vsprites_controlador
+R1
+!i10b 1
+!s100 Ejh@Nf`KNPh7B>Ic`F6id0
+IFa@I0nfinXVQdM>J_GMmD1
+R2
+R0
+w1496767890
+8D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/sprites.v
+FD:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/sprites.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/sprites.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface|D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/sprites.v|
+!i113 1
+R5
+R6
+R7
+vtestbench_vga
+!s110 1496769083
+!i10b 1
+!s100 VccLkelb1S@[:ZJhnGDXa0
+IO?]]TTJCO2VS;J^PBm6733
+R2
+R0
+w1496768127
+8D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/testbench_vga.v
+FD:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/testbench_vga.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1496769083.000000
+!s107 D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/testbench_vga.v|
+!s90 -reportprogress|300|-work|work|D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/testbench_vga.v|
+!i113 1
+o-work work
+R7
+vVGA_Interface_block
+R1
+!i10b 1
+!s100 NW0V;KRTXPi`=jUO5X[9A3
+I;[zXKzZBfN6=[eBMBJhL[3
+R2
+R0
+w1496756522
+8D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/VGA_Interface_block.v
+FD:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/VGA_Interface_block.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/VGA_Interface_block.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface|D:/raul/Lab 4-20170605T141755Z-001/Lab 4/gpu/Interface/VGA_Interface_block.v|
+!i113 1
+R5
+R6
+R7
+n@v@g@a_@interface_block

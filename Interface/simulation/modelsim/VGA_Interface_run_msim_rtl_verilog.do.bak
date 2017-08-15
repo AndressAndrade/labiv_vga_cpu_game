@@ -1,0 +1,11 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/Rafael\ Farias/Desktop/Interface {C:/Users/Rafael Farias/Desktop/Interface/VGA_Interface_block.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Rafael\ Farias/Desktop/Interface {C:/Users/Rafael Farias/Desktop/Interface/clock_25.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Rafael\ Farias/Desktop/Interface/db {C:/Users/Rafael Farias/Desktop/Interface/db/clock_25_altpll.v}
+

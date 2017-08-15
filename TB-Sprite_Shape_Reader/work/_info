@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/17.0
+vLevel_Counter
+Z0 !s110 1501554124
+!i10b 1
+!s100 fN4:KDaU26:idf;Ro;@3[1
+Ik_]:bFHEQI_1BWckX:XDn1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Lucas/Desktop/LAB-IV/Modulo_Exib_2D_v8/TB-Sprite_Shape_Reader
+w1501553541
+8C:/Users/Lucas/Desktop/LAB-IV/Modulo_Exib_2D_v8/TB-Sprite_Shape_Reader/Level_Counter.v
+FC:/Users/Lucas/Desktop/LAB-IV/Modulo_Exib_2D_v8/TB-Sprite_Shape_Reader/Level_Counter.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1501554124.000000
+!s107 C:/Users/Lucas/Desktop/LAB-IV/Modulo_Exib_2D_v8/TB-Sprite_Shape_Reader/Level_Counter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lucas/Desktop/LAB-IV/Modulo_Exib_2D_v8/TB-Sprite_Shape_Reader/Level_Counter.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@level_@counter
+vSprite_Shape_Reader
+!s110 1501554123
+!i10b 1
+!s100 0`D^]:mUKdjeA>5j5k_?D1
+IQ792>1EV[So@I6aX3=b7Z3
+R1
+R2
+w1501554103
+8C:/Users/Lucas/Desktop/LAB-IV/Modulo_Exib_2D_v8/TB-Sprite_Shape_Reader/Sprite_Shape_Reader.v
+FC:/Users/Lucas/Desktop/LAB-IV/Modulo_Exib_2D_v8/TB-Sprite_Shape_Reader/Sprite_Shape_Reader.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1501554123.000000
+!s107 C:/Users/Lucas/Desktop/LAB-IV/Modulo_Exib_2D_v8/TB-Sprite_Shape_Reader/Sprite_Shape_Reader.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lucas/Desktop/LAB-IV/Modulo_Exib_2D_v8/TB-Sprite_Shape_Reader/Sprite_Shape_Reader.v|
+!i113 1
+R5
+R6
+n@sprite_@shape_@reader
+vSprite_Shape_Reader_tb
+R0
+!i10b 1
+!s100 8ilg8]AN?ALmSEbOSMESE0
+I3RXQh4>:C?lW@4]nc1WU<2
+R1
+R2
+w1501552250
+8C:/Users/Lucas/Desktop/LAB-IV/Modulo_Exib_2D_v8/TB-Sprite_Shape_Reader/Sprite_Shape_Reader_testbench.v
+FC:/Users/Lucas/Desktop/LAB-IV/Modulo_Exib_2D_v8/TB-Sprite_Shape_Reader/Sprite_Shape_Reader_testbench.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Lucas/Desktop/LAB-IV/Modulo_Exib_2D_v8/TB-Sprite_Shape_Reader/Sprite_Shape_Reader_testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lucas/Desktop/LAB-IV/Modulo_Exib_2D_v8/TB-Sprite_Shape_Reader/Sprite_Shape_Reader_testbench.v|
+!i113 1
+R5
+R6
+n@sprite_@shape_@reader_tb
+vVGA_Interface_block
+!s110 1501554125
+!i10b 1
+!s100 dU3BLOd8Yj8812DN^L5Wb0
+IAK7g8=TjUClaCAzjXL^o40
+R1
+R2
+w1499552154
+8C:/Users/Lucas/Desktop/LAB-IV/Modulo_Exib_2D_v8/TB-Sprite_Shape_Reader/VGA_Interface_block.v
+FC:/Users/Lucas/Desktop/LAB-IV/Modulo_Exib_2D_v8/TB-Sprite_Shape_Reader/VGA_Interface_block.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1501554125.000000
+!s107 C:/Users/Lucas/Desktop/LAB-IV/Modulo_Exib_2D_v8/TB-Sprite_Shape_Reader/VGA_Interface_block.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lucas/Desktop/LAB-IV/Modulo_Exib_2D_v8/TB-Sprite_Shape_Reader/VGA_Interface_block.v|
+!i113 1
+R5
+R6
+n@v@g@a_@interface_block

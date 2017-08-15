@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Aug 03 18:27:51 2017
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Revision Name : VGA_Interface
+Top-level Entity Name : LAB-IV
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Timing Models : Final
+Total logic elements : 9,648 / 114,480 ( 8 % )
+    Total combinational functions : 9,636 / 114,480 ( 8 % )
+    Dedicated logic registers : 2,178 / 114,480 ( 2 % )
+Total registers : 2178
+Total pins : 72 / 529 ( 14 % )
+Total virtual pins : 0
+Total memory bits : 262,144 / 3,981,312 ( 7 % )
+Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

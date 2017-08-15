@@ -1,0 +1,237 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "HS",
+					"strict" : false
+				},
+				{
+					"name" : "VS",
+					"strict" : false
+				},
+				{
+					"name" : "BLANK",
+					"strict" : false
+				},
+				{
+					"name" : "B[7]",
+					"strict" : false
+				},
+				{
+					"name" : "B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "G[7]",
+					"strict" : false
+				},
+				{
+					"name" : "G[6]",
+					"strict" : false
+				},
+				{
+					"name" : "G[5]",
+					"strict" : false
+				},
+				{
+					"name" : "G[4]",
+					"strict" : false
+				},
+				{
+					"name" : "G[3]",
+					"strict" : false
+				},
+				{
+					"name" : "G[2]",
+					"strict" : false
+				},
+				{
+					"name" : "R[7]",
+					"strict" : false
+				},
+				{
+					"name" : "R[6]",
+					"strict" : false
+				},
+				{
+					"name" : "R[5]",
+					"strict" : false
+				},
+				{
+					"name" : "R[4]",
+					"strict" : false
+				},
+				{
+					"name" : "R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[19]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[18]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[17]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[16]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RST",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_50",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
