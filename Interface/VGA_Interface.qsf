@@ -181,3 +181,4 @@ set_global_assignment -name BDF_FILE "LAB-IV.bdf"
 set_global_assignment -name VERILOG_FILE Level_Counter.v
 set_global_assignment -name VERILOG_FILE Sprite_Shape_Reader.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VERILOG_FILE Controller_Mux.v
