@@ -1,1 +1,1 @@
-# labiv_vga_cpu_game
+Repositório para armazenamento de arquivos do projeto desenvolvido para a disciplina Laboratório Integrado IV - UFBA
